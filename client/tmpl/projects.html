@@ -1,0 +1,28 @@
+<template name="projects">
+  <button class="btn btn-large btn-success addproject" type="button" data-toggle="modal" data-target="#projectform">Add Project</button>
+        {{>projectform}}
+      <div class="row-fluid">
+      <div class="page-header">
+        <h1>Project <small>List</small></h1>
+      </div>
+
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Client</th>
+            <th>Due Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each projectList}}
+            {{>projectRow}}
+          {{/each}}
+        </tbody>
+
+      </table>
+    </div>
+
+
+</template>
